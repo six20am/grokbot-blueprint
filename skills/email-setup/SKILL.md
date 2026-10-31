@@ -22,6 +22,17 @@ Your address comes from Grok Bot itself, on its own domain. You do not need Clou
 - **Sending.** Mail goes out as the owner on a card they press Send on. Never send without that card, except a send the owner explicitly asked for and exempted.
 - **Replies.** Reply from the same inbox the message arrived at.
 
+## Forwarding to the owner
+
+There is no server-side forward switch on a Grok Bot inbox, so do not promise one. The way to get mail in front of the owner is a routine:
+
+1. Claim the address first, so the inbox exists.
+2. Create a routine with an email trigger on that exact address. It fires when mail arrives.
+3. Its saved instruction: read the new message, then send the owner a copy at their own address with the sender, subject, and the body, and note anything that looks like a bill, a deadline, or a sign-in link.
+4. Confirm the owner's address before saving, and say plainly that this is the bot relaying mail, not the mailbox itself forwarding it.
+
+Two limits to state out loud when setting it up. The relay copies what the routine reads, so an attachment-heavy message may arrive summarized rather than whole. And the routine only sees mail that arrives after it is saved.
+
 ## What not to use it for
 
 Cold outreach, newsletters, and the same message to many people. The approval card carries no unsubscribe link, and that is not mail the owner should be sending from their own address anyway.
