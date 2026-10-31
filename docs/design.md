@@ -55,6 +55,7 @@ The folder names come from the chosen style. The three routing layers and the vo
 | `voice-extractor` | Builds `voice.md` from real samples of the owner's writing, and checks it by asking which paragraph is theirs. |
 | `workspace-audit` | Checks the map, the routers and the notes against what is actually on disk, and reports the drift. |
 | `tool-vetting` | Six questions before recommending anything gets installed or connected, then adopt, try, or skip. |
+| `email-setup` | Claims the bot its own address, explains plus-tagging, and sets the rule that mail goes out on an approval card. |
 
 ## The four questions
 
@@ -62,6 +63,12 @@ The folder names come from the chosen style. The three routing layers and the vo
 2. "What are the two or three kinds of work you would hand to an assistant?" Free text. Each answer becomes a workspace. "Not sure" picks three from answer 1.
 3. "How do you like things filed?" The six styles, two-line example each. "Not sure" picks by-stage.
 4. "How should I sound when I write for you?" Plain and direct, warm, formal, or a pasted sample. Becomes `voice.md`. "Not sure" picks plain and direct.
+
+## Email
+
+Grok Bot gives every bot an address on the product domain, natively. There is no Cloudflare step, no custom domain, and no third-party mailbox, so this belongs in the template as a claim flow rather than an integration.
+
+The offer comes once, at the end of `getting-started`, after the workspace is built and tested. Declining is final until the owner asks.
 
 ## Out of scope
 
