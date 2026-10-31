@@ -1,13 +1,11 @@
 # Start here
 
-You do not need to read anything else. Import the template, open the bot, and answer four questions.
+You do not need to read anything else. Add the template, open the bot, and answer four questions.
 
-1. In Grok Bot, open **Templates** and import **Workspace Blueprint**.
-2. Open the new bot. Its first message asks what you do.
-3. Answer the four questions. Most people take ten minutes.
-4. It builds your folders, writes the files, then runs one real task to prove the routing works.
+1. Open the template link and choose **Add to Grok Bot**. Or in the app, open **Connect apps**, choose **Bot templates**, open the template, and choose **Import Bot**.
+2. Open the new bot. It asks what you do. If it doesn't, say "run getting-started".
+3. Answer the four questions.
+4. It builds your folders and writes the files. Then it asks you to open a new chat and give it one real task, to prove it can find its way.
 5. It offers to give itself an email address and a phone number, so people can reach it directly. Both are optional and it asks once.
 
-If it stops, ask it to run its `getting-started` skill.
-
-Nothing is sent anywhere. Nothing is installed without the bot saying what it is first.
+Setup sends nothing to anyone. Nothing is installed without the bot saying what it is first. Your bot and its files live on a cloud computer, not on your own machine.

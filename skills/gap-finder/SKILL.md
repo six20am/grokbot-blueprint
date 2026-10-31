@@ -18,11 +18,15 @@ Read `gap-log.md`. If the same kind of task has been done by hand three times, s
 
 ## The three choices
 
-**Build.** A short interview, four questions at most: what the task is, what goes in, what comes out, and what must never happen. Then write a `SKILL.md` with the steps, add one row to the right `NOTES.md` or to `ROUTER.md` so it gets found next time, and run the task with the new skill so it is proven, not just written.
+**Build.** A short interview, four questions at most: what the task is, what goes in, what comes out, and what must never happen. Then save it as a skill in Grok Bot, with a description that says when to use it, add one row to the right `NOTES.md` or to `ROUTER.md` so it gets found next time, and run the task with the new skill so it is proven, not just written.
 
-**Find.** Search for an outside tool or connector that does the job. Vet it before recommending: who makes it, what it costs, what it reads from the owner's accounts, and whether it can be removed cleanly. Nothing gets installed without a clear verdict and the owner's yes.
+**Find.** Search for an outside tool or connector that does the job, and run `tool-vetting` on it. Nothing gets installed without a clear verdict and the owner's yes.
 
-**By hand.** Do the task now. Then append one line to `gap-log.md`: the date, the task in a few words, and which choice was made. Write the line with the real date, and never invent one.
+**By hand.** Do the task now.
+
+## Log it
+
+Whichever choice was made, append one line to `gap-log.md`: the date, the task in a few words, and the choice. Write the line with the real date, and never invent one.
 
 ## Never
 
