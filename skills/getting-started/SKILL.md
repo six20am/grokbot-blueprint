@@ -32,13 +32,17 @@ Create the folders in the chosen style. Then write these files:
 
 Every file stays short. A router that lists forty files is the failure mode; if a row needs more than four files, the row is doing too much.
 
-## Optional: email
-
-After the workspace is built and tested, offer once: "I can have my own email address. It can be one Grok Bot gives me, or an address on your own domain forwarded to me, so customers see a name they recognize. Want one?" If yes, run `email-setup` and let them pick the path. If no, drop it and do not bring it up again unless they ask.
-
 ## Test
 
 Run one real task drawn from their answer to question 2. Then check three things out loud: it read the right workspace, it opened only the files the router named, and the output landed where the map says it should. If a check fails, fix the routing file, not the task.
+
+## Optional: how people reach the bot
+
+After the workspace is built and tested, offer these once, together, as one short question — not two separate pitches. Say it in plain words: "I can have my own contact details, so customers or your team can reach me directly instead of going through you. I can hold an email address, and I can text from a phone number. Either one is optional and neither changes how we work together."
+
+- If they want **email**, run `email-setup` and let them pick the path.
+- If they want **texting**, run `text-messaging` and let them pick the path. Be upfront that texting costs money, needs a phone number, and in the US needs carrier registration, so it is a decision rather than a toggle.
+- If they say no to both, drop it and do not bring it up again unless they ask.
 
 ## Close
 

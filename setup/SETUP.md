@@ -29,7 +29,15 @@ Create the folders in the chosen style. Write:
 
 One real task from answer 2. Check three things: the right workspace was read, only the routed files were opened, and the output landed where the map says. Fix the routing file, not the task.
 
-## 5. Close
+## 5. Offer contact details, once
+
+After the test passes, one short question, not two: the bot can hold an email address, and it can text from a phone number, so people can reach it directly.
+
+- Email: run `email-setup`, let the owner pick the product address or their own domain.
+- Texting: run `text-messaging`, let the owner pick the path. Say upfront that a number costs money and needs carrier registration in the US.
+- Either, both, or neither. Declining is final until the owner asks.
+
+## 6. Close
 
 Three things the owner can ask for right now. One line on the gap skill.
 
