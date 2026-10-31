@@ -15,6 +15,13 @@ The design is `docs/design.md`.
 - A voice file, so anything written for the owner sounds like the owner.
 - A gap-finder, so a task with no skill gets a one-line offer to build one, find a tool, or do it by hand, and the gap gets logged.
 - A voice extractor, a workspace audit, and a tool-vetting checklist.
+- An email skill, so the bot can claim its own address and send and receive on the owner's behalf.
+
+## Email
+
+Grok Bot gives each bot its own address on the product domain. No domain, no Cloudflare, no mail host. The owner picks the name, the bot checks it is free, and claims it. Mail sent to a plus-tagged address arrives tagged, so a signup and its follow-up are easy to tell apart.
+
+`skills/email-setup` covers the whole flow.
 
 ## How it works
 
