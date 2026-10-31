@@ -34,7 +34,7 @@ Every file stays short. A router that lists forty files is the failure mode; if 
 
 ## Optional: email
 
-After the workspace is built and tested, offer once: "I can have my own email address, so I can send and receive on your behalf. Want one?" If yes, run `email-setup`. If no, drop it and do not bring it up again unless they ask.
+After the workspace is built and tested, offer once: "I can have my own email address. It can be one Grok Bot gives me, or an address on your own domain forwarded to me, so customers see a name they recognize. Want one?" If yes, run `email-setup` and let them pick the path. If no, drop it and do not bring it up again unless they ask.
 
 ## Test
 
