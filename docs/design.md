@@ -56,6 +56,7 @@ The folder names come from the chosen style. The three routing layers and the vo
 | `workspace-audit` | Checks the map, the routers and the notes against what is actually on disk, and reports the drift. |
 | `tool-vetting` | Six questions before recommending anything gets installed or connected, then adopt, try, or skip. |
 | `email-setup` | Claims the bot its own address, explains plus-tagging, and sets the rule that mail goes out on an approval card. |
+| `text-messaging` | Picks a phone number with the owner, explains A2P 10DLC before they commit, and sets the rules for quiet hours, opt-in, and sends on an approval card. |
 
 ## The four questions
 
@@ -76,7 +77,27 @@ What forwarding does not give them: the ability to reply as that address. That i
 
 **Relaying to the owner.** A routine with an email trigger reads new mail and sends the owner a copy. There is no server-side forward switch, so this is the honest substitute, and the skill names its two limits: attachments may be summarized, and it only sees mail after it is saved.
 
-The offer comes once, at the end of `getting-started`, after the workspace is built and tested. Declining is final until the owner asks.
+The offer comes once, at the end of `getting-started`, after the workspace is built and tested, in the same question as texting. Declining is final until the owner asks.
+
+## Texting
+
+There is no texting switch on a Grok Bot, and no version of one is coming. Texting needs a phone number, and a number belongs to a carrier, a VoIP service, or a messaging platform. So the skill does not pretend a setting exists; it helps the owner pick a provider and connects it.
+
+**The constraint that decides everything: A2P 10DLC.** US carriers treat software-sent SMS as application-to-person traffic, and application-to-person traffic on a ten-digit number has to be registered: a brand registration for the business, a campaign registration describing the messages, a one-time fee, a monthly campaign fee, and a per-message carrier surcharge. Approval takes days and can be rejected. Every provider walks the owner through it and some cover small volumes under their own registration, but nobody skips it. The skill says this before the owner picks, because it is the reason the cheapest option is often not the right one.
+
+**Three paths.**
+
+| Path | For | Names |
+|---|---|---|
+| A number they already pay for | An owner with a business phone system already texting customers | Quo (formerly OpenPhone), RingCentral, Dialpad, HighLevel |
+| An identity built for an agent | An owner with no phone system, or one who wants the bot's line kept separate | Inkbox |
+| A carrier API | A technical owner, or one sending volume and wanting one provider for voice, SMS and email | Twilio, Sinch |
+
+Path A is the default to ask about first, because it needs no new number and the registration is already done. The skill's single qualifying question is whether they already text customers from a business number.
+
+**Costs are stated as shapes, not quotes.** Path A runs to a per-user subscription in the low tens of dollars a month with roughly a cent a message. Path B is a monthly fee for a dedicated number with a few hundred messages included. Path C is a dollar or two a month to hold a number and under a cent a message, plus the registration fees and the owner's own time. The skill tells the bot to confirm current numbers with the provider rather than quote a stale figure.
+
+**The rules once it works.** Every send to a real person goes out on an approval card, the same as email. No marketing texts before 8am or after 9pm in the recipient's own time zone. `STOP` is honored immediately. Marketing and support traffic stay in separate registered campaigns. Cold outreach and purchased lists are out.
 
 ## Out of scope
 
@@ -88,4 +109,5 @@ The offer comes once, at the end of `getting-started`, after the workspace is bu
 
 - **The four questions are the whole product.** A bot that asks them badly produces a workspace nobody uses. The skill spells out the order, the defaults, and the ban on asking all four at once.
 - **Short files get longer.** Every routing file is supposed to stay small. `workspace-audit` exists to catch the drift, and the router rule is explicit: more than four files in a row means the row is doing too much.
+- **Texting costs money in a way email does not.** Two of the three paths carry a monthly fee and a registration that takes days, so the skill leads with cost and the registration requirement instead of letting the owner discover them at checkout. A template that quietly implies a free toggle would be worse than one that says no.
 - **The template and this repo can drift.** They are packed from the same text today. The check is a diff of the skill bodies, and it is manual.

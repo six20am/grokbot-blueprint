@@ -6,6 +6,7 @@ You do not need to read anything else. Import the template, open the bot, and an
 2. Open the new bot. Its first message asks what you do.
 3. Answer the four questions. Most people take ten minutes.
 4. It builds your folders, writes the files, then runs one real task to prove the routing works.
+5. It offers to give itself an email address and a phone number, so people can reach it directly. Both are optional and it asks once.
 
 If it stops, ask it to run its `getting-started` skill.
 
