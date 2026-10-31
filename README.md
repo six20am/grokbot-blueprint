@@ -1,35 +1,7 @@
-# Grok Bot Blueprint
+# Retired
 
-A base workspace for a Grok Bot, built the way the Workspace Blueprint is built: the bot sets itself up on the first conversation, then works out of the space it made.
+This repo was a vendor-specific copy of the Workspace Blueprint. It is archived and read-only.
 
-No file editing. Four questions, one filing style.
+The blueprint now has one home: https://github.com/six20am/workspace-blueprint. Any AI agent with files that persist, a shell and a way to keep one standing rule can set it up for itself by following `ADAPT.md` in that repo. The one-page guide is https://workspace-blueprint.pages.dev/.
 
-**Status:** built. The skills are written and the setup conversation is specified. Not yet run with a new owner on a clean import. The checks still open are in `docs/publish.md`.
-
-The design is `docs/design.md`.
-
-## What you get
-
-- A workspace in one of six filing styles: military, by stage, by client or project, PARA, numbered index, or by date.
-- Three routing layers: a map, a router, and a notes file for each section of the work, so the bot loads only what a task needs. A saved memory rule makes the bot read them before every task.
-- A voice file, so anything written for the owner sounds like the owner.
-- A gap-finder, so a task with no skill gets a one-line offer to build one, find a tool, or do it by hand, and the gap gets logged.
-- A voice extractor, a workspace audit, and a tool-vetting checklist.
-
-## How it works
-
-1. Add the template to Grok Bot from its link, or import it from **Connect apps**, **Bot templates**.
-2. The first conversation runs `getting-started`: four questions, one at a time.
-3. The bot builds its folder inside `/workspace`, writes the three routing layers and `voice.md`, saves the rule that loads them, then proves it on one real task in a new chat.
-
-There is no installer and nothing to download. The bot's cloud computer is the machine.
-
-Publishing a new version is in `docs/publish.md`.
-
-## Built from
-
-The Workspace Blueprint (`six20am/workspace-blueprint`), which does the same job for Claude Code on a personal computer with a double-click installer. This repo keeps the method and drops the installer, because a Grok Bot already has a computer and a shell.
-
-## Maintained by
-
-Six20AM.
+Nothing here is maintained. Archived 2026-10-31.
