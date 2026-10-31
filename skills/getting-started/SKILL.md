@@ -32,6 +32,10 @@ Create the folders in the chosen style. Then write these files:
 
 Every file stays short. A router that lists forty files is the failure mode; if a row needs more than four files, the row is doing too much.
 
+## Optional: email
+
+After the workspace is built and tested, offer once: "I can have my own email address, so I can send and receive on your behalf. Want one?" If yes, run `email-setup`. If no, drop it and do not bring it up again unless they ask.
+
 ## Test
 
 Run one real task drawn from their answer to question 2. Then check three things out loud: it read the right workspace, it opened only the files the router named, and the output landed where the map says it should. If a check fails, fix the routing file, not the task.
