@@ -66,7 +66,15 @@ The folder names come from the chosen style. The three routing layers and the vo
 
 ## Email
 
-Grok Bot gives every bot an address on the product domain, natively. There is no Cloudflare step, no custom domain, and no third-party mailbox, so this belongs in the template as a claim flow rather than an integration.
+Two paths, because the owner's situation differs.
+
+**Product domain.** Grok Bot gives every bot an address natively. No domain, no mail host, no third-party mailbox. This is the zero-setup path and the default to offer first.
+
+**Their own domain.** The owner forwards an address they own into the bot's Grok Bot inbox. It costs them a provider screen and a verification click, and in exchange the address is one their customers recognize. The skill walks the provider's own screens by name: Google Workspace recipients and routing, Microsoft 365 mail flow rules, Cloudflare Email Routing, Fastmail rules, and host-panel forwarders.
+
+What forwarding does not give them: the ability to reply as that address. That is a separate connection to their mailbox, and the skill says so rather than letting them discover it later.
+
+**Relaying to the owner.** A routine with an email trigger reads new mail and sends the owner a copy. There is no server-side forward switch, so this is the honest substitute, and the skill names its two limits: attachments may be summarized, and it only sees mail after it is saved.
 
 The offer comes once, at the end of `getting-started`, after the workspace is built and tested. Declining is final until the owner asks.
 

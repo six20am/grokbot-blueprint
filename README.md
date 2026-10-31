@@ -19,9 +19,15 @@ The design is `docs/design.md`.
 
 ## Email
 
-Grok Bot gives each bot its own address on the product domain. No domain, no Cloudflare, no mail host. The owner picks the name, the bot checks it is free, and claims it. Mail sent to a plus-tagged address arrives tagged, so a signup and its follow-up are easy to tell apart.
+Two paths, and the owner picks one.
 
-`skills/email-setup` covers the whole flow.
+**A Grok Bot address.** The bot claims its own on the product domain. No domain, no Cloudflare, no mail host. Plus-tagged addresses work, so a different tag per signup shows which service a message came from.
+
+**Their own domain.** The owner creates an address such as `assistant@theirdomain.com` at their mail provider and forwards it to the bot's Grok Bot inbox. The skill walks them through the provider's own screens, including the verification email a service like Cloudflare Email Routing sends to the destination address.
+
+Separately, the bot can relay what it receives to the owner's inbox. That is a routine with an email trigger, not a mailbox setting, and the skill says so rather than implying a forward switch exists.
+
+`skills/email-setup` covers all three.
 
 ## How it works
 
